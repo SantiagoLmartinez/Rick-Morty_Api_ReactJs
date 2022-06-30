@@ -1,9 +1,11 @@
 //import FetchCharacters from "./components/FetchCharacters";
+import './app.css';
 import React,{useEffect, useState} from 'react'
 
 import { NavbarComp } from './components/Navbar'
 import PaginationComp from './components/Pagination'
 import CharacterComp  from './components/Character'
+import FooterComp from './components/Footer'
 
 function App() {
   const urlInitial = 'https://rickandmortyapi.com/api/character'
@@ -46,6 +48,8 @@ function App() {
       </div>
       <PaginationComp prev={info.prev} next={info.next} onPrevious={onPrevious} onNext={onNext}/>
       </div>
+      
+      <FooterComp/>
     </div>
       
   );
